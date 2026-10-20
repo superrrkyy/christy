@@ -272,6 +272,8 @@
         .dated { position: absolute; left: 71.3%; top: 15.6%; text-align: center; }
         .dated .date { font-family: "Allura", cursive; font-size: calc(1.85 * var(--u)); line-height: 1; }
         .dated p { font-size: calc(1.05 * var(--u)); font-weight: 600; margin-top: calc(0.2 * var(--u)); }
+        .dated .credit { letter-spacing: .12em; text-transform: uppercase; font-size: calc(0.92 * var(--u)); }
+        .dated .credit b { font-weight: 600; }
 
         .drips { position: absolute; right: calc(2 * var(--u)); top: calc(2 * var(--u)); width: calc(12.6 * var(--u)); }
         .drips svg { width: 100%; height: auto; display: block; }
@@ -445,6 +447,16 @@
         .footer-meta { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: clamp(48px, 6vw, 80px); font-family: "Jost", sans-serif; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; }
         .footer-meta > span:first-child { opacity: .75; }
         .footer-meta .date { font-family: "Allura", cursive; font-size: 26px; letter-spacing: 0; text-transform: none; }
+        .footer-meta .site-by {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: calc(0.45 * var(--u)) calc(1.05 * var(--u));
+            border: 1px solid currentColor; border-radius: 999px;
+            letter-spacing: .22em; transition: background .35s, color .35s;
+        }
+        .footer-meta .site-by:hover { background: currentColor; }
+        .footer-meta .site-by:hover b, .footer-meta .site-by:hover i { color: var(--ink); }
+        .footer-meta .site-by b { position: relative; }
+        .footer-meta .site-by i { font-style: normal; }
         .to-top { display: inline-flex; align-items: center; gap: 12px; }
         .to-top i { width: 44px; height: 44px; border: 1px solid currentColor; border-radius: 50%; display: grid; place-items: center; font-style: normal; }
         .footer-giant {
@@ -583,7 +595,7 @@
 
                     <div class="dated">
                         <div class="date">Jakarta,05-12-2005</div>
-                        <p>Project By axryzure</p>
+                        <p class="credit">Site by <b>axryzure</b></p>
                     </div>
 
                     <div class="drips" aria-hidden="true">
@@ -786,7 +798,7 @@
         </ul>
 
         <div class="footer-meta">
-            <span>Project By axryzure</span>
+            <a class="site-by" href="https://github.com/superrrkyy" target="_blank" rel="noopener noreferrer" aria-label="Situs dibuat oleh axryzure, buka profil GitHub di tab baru">Site by <b>axryzure</b> <i>↗</i></a>
             <span class="date">Jakarta, 05-12-2005</span>
             <a href="#home" class="to-top">Kembali ke atas <i>↑</i></a>
         </div>
@@ -794,7 +806,7 @@
         <div class="footer-giant" aria-hidden="true">
             <span class="ch"><span class="ci">C</span></span><span class="ch"><span class="ci">H</span></span><span class="ch"><span class="ci">R</span></span><span class="ch"><span class="ci">I</span></span><span class="ch"><span class="ci">S</span></span><span class="ch"><span class="ci">T</span></span><span class="ch"><span class="ci">Y</span></span>
         </div>
-        <p class="footer-copy">© 2026 axryzure — Christy Portfolio</p>
+        <p class="footer-copy">© 2026 Christy Portfolio · Designed &amp; built by axryzure</p>
     </footer>
 
     <script>
