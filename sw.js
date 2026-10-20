@@ -5,7 +5,7 @@
       bukan halaman error bawaan browser.
    3. Saat online, halaman selalu diambil versi terbaru (network-first). */
 
-const VERSION = 'christy-v2';
+const VERSION = 'christy-v3';
 const PRECACHE = VERSION + '-precache';
 const RUNTIME = VERSION + '-runtime';
 
@@ -22,6 +22,7 @@ const CORE = [
     './assets/icon-192.png',
     './assets/icon-512.png',
     './assets/og-cover.jpg',
+    './preview.jpg',
     './img/01.jpg', './img/02.jpg', './img/03.jpg', './img/04.jpg', './img/05.jpg',
     './img/06.jpg', './img/07.jpg', './img/08.jpg', './img/09.jpg', './img/10.jpg'
 ];
