@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline — Christy</title>
+    <meta name="description" content="Kamu sedang offline. Halaman yang pernah dibuka tetap bisa diakses.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#ededed">
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <style>
+        :root { --paper:#ededed; --paper-2:#e4e4e2; --ink:#1f1f1f; --muted:#5c5c5a; --u: clamp(6px, 1vw, 14px); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { overflow-x: clip; }
+        body { background: var(--paper); color: var(--ink); }
+        .page {
+            position: relative; min-height: 100svh;
+            display: flex; flex-direction: column;
+            background: var(--paper); color: var(--ink);
+            font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+        .frame { position: absolute; inset: calc(2 * var(--u)); border: calc(.22 * var(--u)) solid var(--ink); pointer-events: none; z-index: 1; }
+
+        .wrap {
+            position: relative; z-index: 2; flex: 1;
+            display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+            gap: clamp(24px, 5vw, 80px);
+            padding: clamp(72px, 12vh, 140px) clamp(28px, 7vw, 96px);
+        }
+
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: 14px;
+            font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--muted);
+        }
+        .eyebrow::before { content: ""; width: 40px; height: 1px; background: currentColor; }
+
+        .code {
+            font-family: Georgia, "Times New Roman", serif; font-weight: 400;
+            font-size: clamp(64px, 9vw, 132px); line-height: .9; letter-spacing: -.02em;
+            margin: clamp(18px, 2vw, 30px) 0 clamp(10px, 1.4vw, 18px);
+        }
+        .code em { font-style: italic; font-size: .78em; }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif; font-weight: 400;
+            font-size: clamp(24px, 2.9vw, 42px); line-height: 1.18; max-width: 24ch;
+        }
+        h1 em { font-style: italic; }
+
+        .desc { margin-top: clamp(16px, 1.6vw, 24px); max-width: 36ch; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.6; color: #333; }
+
+        .actions { margin-top: clamp(28px, 3vw, 42px); display: flex; flex-wrap: wrap; gap: 14px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 12px; cursor: pointer;
+            padding: 14px 26px; border: 1px solid var(--ink); border-radius: 999px; background: transparent;
+            font-family: inherit; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+            transition: background .35s, color .35s, transform .35s cubic-bezier(.16,1,.3,1);
+        }
+        .btn:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+        .btn.solid { background: var(--ink); color: var(--paper); }
+        .btn.solid:hover { background: transparent; color: var(--ink); }
+
+        .hint { margin-top: clamp(26px, 3vw, 38px); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); line-height: 2; }
+        .hint b { font-weight: 500; color: var(--ink); }
+
+        /* ilustrasi sinyal putus */
+        .art { position: relative; display: flex; justify-content: center; align-items: center; }
+        .circle {
+            width: clamp(210px, 26vw, 340px); aspect-ratio: 1; border: 1px solid var(--ink); border-radius: 50%;
+            display: grid; place-items: center; position: relative; background: var(--paper-2);
+        }
+        .circle::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(31,31,31,.25); border-radius: 50%; }
+        .circle svg { width: 46%; height: auto; }
+        .circle .sub { position: absolute; bottom: 18%; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+        .pulse { animation: pulse 2.6s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: .28; } 50% { opacity: 1; } }
+
+        .foot {
+            position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 14px 30px;
+            align-items: center; justify-content: space-between;
+            padding: clamp(20px, 3vw, 30px) clamp(28px, 7vw, 96px) clamp(26px, 4vw, 40px);
+            font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+        }
+        .site-by {
+            display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px;
+            border: 1px solid var(--ink); border-radius: 999px; color: var(--ink);
+            font-size: 11px; letter-spacing: .22em; transition: background .35s, color .35s;
+        }
+        .site-by:hover { background: var(--ink); color: var(--paper); }
+        .site-by i { font-style: normal; }
+
+        @media (max-width: 860px) {
+            .wrap { grid-template-columns: 1fr; gap: clamp(26px, 5vw, 38px); padding-top: clamp(58px, 9vh, 92px); padding-bottom: clamp(44px, 8vw, 60px); }
+            .art { order: -1; justify-content: flex-start; }
+            .circle { width: clamp(150px, 42vw, 200px); }
+            .circle::before { inset: 10px; }
+            .circle .sub { bottom: 14%; font-size: 9px; }
+            .code { font-size: clamp(52px, 15vw, 76px); }
+            .actions .btn { padding: 12px 20px; font-size: 12px; }
+            .frame { inset: 12px; }
+            .foot { justify-content: space-between; gap: 16px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition-duration: .001ms !important; animation: none !important; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="frame" aria-hidden="true"></div>
+
+    <main class="wrap">
+        <div>
+            <span class="eyebrow">Koneksi terputus · Mode offline</span>
+            <div class="code">Off<em>&nbsp;line</em></div>
+            <h1>Kamu sedang <em>di luar jaringan.</em></h1>
+            <p class="desc">
+                Halaman ini muncul karena perangkatmu tidak terhubung ke internet.
+                Begitu sinyal kembali, semua foto dan animasi akan termuat seperti biasa.
+            </p>
+
+            <div class="actions">
+                <button class="btn solid" type="button" onclick="location.reload()">Coba lagi <span>↻</span></button>
+                <a class="btn" href="index.html">Halaman yang tersimpan <span>→</span></a>
+            </div>
+
+            <p class="hint">
+                Sudah pernah dibuka sebelum offline?<br>
+                <b>Beranda, profil, galeri, dan 404 tetap bisa diakses.</b>
+            </p>
+        </div>
+
+        <div class="art" aria-hidden="true">
+            <div class="circle">
+                <svg viewBox="0 0 64 48" fill="none" stroke="#1f1f1f" stroke-width="2.4" stroke-linecap="round">
+                    <path class="pulse" d="M4 17C19 4 45 4 60 17" opacity=".35"/>
+                    <path d="M12 26C23 16 41 16 52 26"/>
+                    <path d="M21 35C27 30 37 30 43 35"/>
+                    <circle cx="32" cy="43" r="2.6" fill="#1f1f1f" stroke="none"/>
+                    <line x1="8" y1="4" x2="56" y2="44" stroke-width="2.2"/>
+                </svg>
+                <span class="sub">Tanpa jaringan</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="foot">
+        <span>© 2026 Christy Portfolio</span>
+        <a class="site-by" href="https://github.com/superrrkyy" target="_blank" rel="noopener noreferrer">Site by axryzure <i>↗</i></a>
+    </footer>
+</div>
+
+    <script>
+    /* Saat sinyal kembali, langsung muat ulang otomatis (sekali). */
+    addEventListener('online', () => {
+        if (!sessionStorage.getItem('offline-reloaded')) {
+            sessionStorage.setItem('offline-reloaded', '1');
+            location.reload();
+        }
+    });
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+    }
+    </script>
+</body>
+</html>

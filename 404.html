@@ -189,5 +189,10 @@
             Site by axryzure <i>↗</i>
         </a>
     </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        addEventListener('load', () => navigator.serviceWorker.register('/christy/sw.js').catch(() => {}));
+    }
+    </script>
 </body>
 </html>
