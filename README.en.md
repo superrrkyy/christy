@@ -84,11 +84,11 @@ The design is intentionally built like a **living magazine poster**: giant serif
 | Technology | Role in this project | Logo |
 |:---|:---|:---:|
 | **HTML5** | Page structure, semantic elements (`<main>`, `<figure>`, `<dl>`), Open Graph metadata | <img src="https://cdn.simpleicons.org/html5/E34F26" width="26" alt="HTML5" /> |
-| **CSS3** | Grid & Flexbox layout, custom properties, `clamp()` fluid typography, `aspect-ratio`, `@keyframes`, `prefers-reduced-motion` | <img src="https://cdn.simpleicons.org/css3/1572B6" width="26" alt="CSS3" /> |
+| **CSS3** | Grid & Flexbox layout, custom properties, `clamp()` fluid typography, `aspect-ratio`, `@keyframes`, `prefers-reduced-motion` | <img src="https://cdn.simpleicons.org/css/1572B6" width="26" alt="CSS3" /> |
 | **JavaScript (ES6+)** | Interaction logic: loader, scroll-spy, mobile menu, parallax | <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="26" alt="JavaScript" /> |
 | **GSAP 3.12.5** | Core animation engine — intro timeline, reveals, magnetic buttons | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="GSAP" /> |
 | **GSAP ScrollTrigger** | Scroll-driven animation, horizontal gallery *pinning*, progress bar | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="ScrollTrigger" /> |
-| **Service Worker** | Offline mode, asset caching, `offline.html` fallback | <img src="https://cdn.simpleicons.org/pwascript/5A0FC8" width="26" alt="Service Worker" /> |
+| **Service Worker** | Offline mode, asset caching, `offline.html` fallback | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="Service Worker" /> |
 | **Web App Manifest** | Installable to home screen (PWA), icons, theme color | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="PWA" /> |
 | **GitHub Pages** | Free hosting, automatic HTTPS, deploy from `main` | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/ededed"><source media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/github/181717"><img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /></picture> |
 | **Git & GitHub** | Version control and collaboration | <img src="https://cdn.simpleicons.org/git/F05032" width="26" alt="Git" /> |
@@ -630,11 +630,11 @@ Desainnya dibangun seperti **poster majalah hidup**: tipografi serif raksasa, fo
 | Teknologi | Peran dalam proyek | Logo |
 |:---|:---|:---:|
 | **HTML5** | Struktur halaman, elemen semantik, metadata Open Graph | <img src="https://cdn.simpleicons.org/html5/E34F26" width="26" alt="HTML5" /> |
-| **CSS3** | Grid & Flexbox, custom properties, `clamp()` fluid typography, animasi, `prefers-reduced-motion` | <img src="https://cdn.simpleicons.org/css3/1572B6" width="26" alt="CSS3" /> |
+| **CSS3** | Grid & Flexbox, custom properties, `clamp()` fluid typography, animasi, `prefers-reduced-motion` | <img src="https://cdn.simpleicons.org/css/1572B6" width="26" alt="CSS3" /> |
 | **JavaScript (ES6+)** | Logika interaksi: loader, scroll-spy, menu mobile, parallax | <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="26" alt="JavaScript" /> |
 | **GSAP 3.12.5** | Engine animasi utama — timeline intro, reveal, efek magnet | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="GSAP" /> |
 | **GSAP ScrollTrigger** | Animasi berbasis scroll, pinning galeri, progress bar | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="ScrollTrigger" /> |
-| **Service Worker** | Mode offline, cache aset, fallback `offline.html` | <img src="https://cdn.simpleicons.org/pwascript/5A0FC8" width="26" alt="Service Worker" /> |
+| **Service Worker** | Mode offline, cache aset, fallback `offline.html` | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="Service Worker" /> |
 | **Web App Manifest** | Bisa dipasang ke home screen (PWA), ikon, warna tema | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="PWA" /> |
 | **GitHub Pages** | Hosting gratis, HTTPS otomatis, deploy dari `main` | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/ededed"><source media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/github/181717"><img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /></picture> |
 | **Git & GitHub** | Version control + kolaborasi | <img src="https://cdn.simpleicons.org/git/F05032" width="26" alt="Git" /> |
