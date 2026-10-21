@@ -90,7 +90,7 @@ The design is intentionally built like a **living magazine poster**: giant serif
 | **GSAP ScrollTrigger** | Scroll-driven animation, horizontal gallery *pinning*, progress bar | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="ScrollTrigger" /> |
 | **Service Worker** | Offline mode, asset caching, `offline.html` fallback | <img src="https://cdn.simpleicons.org/pwascript/5A0FC8" width="26" alt="Service Worker" /> |
 | **Web App Manifest** | Installable to home screen (PWA), icons, theme color | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="PWA" /> |
-| **GitHub Pages** | Free hosting, automatic HTTPS, deploy from `main` | <img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /> |
+| **GitHub Pages** | Free hosting, automatic HTTPS, deploy from `main` | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/ededed"><source media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/github/181717"><img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /></picture> |
 | **Git & GitHub** | Version control and collaboration | <img src="https://cdn.simpleicons.org/git/F05032" width="26" alt="Git" /> |
 
 </div>
@@ -636,7 +636,7 @@ Desainnya dibangun seperti **poster majalah hidup**: tipografi serif raksasa, fo
 | **GSAP ScrollTrigger** | Animasi berbasis scroll, pinning galeri, progress bar | <img src="https://cdn.simpleicons.org/greensock/88CE02" width="26" alt="ScrollTrigger" /> |
 | **Service Worker** | Mode offline, cache aset, fallback `offline.html` | <img src="https://cdn.simpleicons.org/pwascript/5A0FC8" width="26" alt="Service Worker" /> |
 | **Web App Manifest** | Bisa dipasang ke home screen (PWA), ikon, warna tema | <img src="https://cdn.simpleicons.org/pwa/5A0FC8" width="26" alt="PWA" /> |
-| **GitHub Pages** | Hosting gratis, HTTPS otomatis, deploy dari `main` | <img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /> |
+| **GitHub Pages** | Hosting gratis, HTTPS otomatis, deploy dari `main` | <picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/ededed"><source media="(prefers-color-scheme: light)" srcset="https://cdn.simpleicons.org/github/181717"><img src="https://cdn.simpleicons.org/github/181717" width="26" alt="GitHub" /></picture> |
 | **Git & GitHub** | Version control + kolaborasi | <img src="https://cdn.simpleicons.org/git/F05032" width="26" alt="Git" /> |
 
 </div>
